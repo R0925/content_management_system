@@ -43,6 +43,54 @@
   font-style: normal;
 }
 
+
+
+
+
+@font-face {
+  font-family: 'anjoman';
+  src: url('../public/fonts/anjoman/eot/AnjomanFaNum-Black.eot');
+  src: url('../public/fonts/anjoman/Woff/AnjomanFaNum-Black.woff') format('woff'),
+       url('../public/fonts/anjoman/Woff2/AnjomanFaNum-Black.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'anjoman';
+  src: url('../public/fonts/anjoman/eot/AnjomanFaNum-SemiBold.eot');
+  src: url('../public/fonts/anjoman/woff/AnjomanFaNum-SemiBold.woff') format('woff'),
+       url('../public/fonts/anjoman/Woff2/AnjomanFaNum-SemiBold.woff2')format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'anjoman';
+  src: url('../public/fonts/anjoman/eot/AnjomanFaNum-ExtraBold.eot');
+  src: url('../public/fonts/anjoman/woff/AnjomanFaNum-ExtraBold.woff') format('woff'),
+       url('../public/fonts/anjoman/Woff2/AnjomanFaNum-ExtraBold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'anjoman';
+  src: url('../public/fonts/anjoman/eot/AnjomanFaNum-Thin.eot');
+  src: url('../public/fonts/anjoman/woff/AnjomanFaNum-Thin.woff') format('woff'),
+       url('../public/fonts/anjoman/Woff2/AnjomanFaNum-Thin.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'anjoman';
+  src: url('../public/fonts/anjoman/eot/AnjomanFaNum-ExtraLight.eot');
+  src: url('../public/fonts/anjoman/woff/AnjomanFaNum-ExtraLight.woff') format('woff'),
+       url('../public/fonts/anjoman/Woff2/AnjomanFaNum-ExtraLight.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+
+
 body{
   font-family: 'iransans';
 }

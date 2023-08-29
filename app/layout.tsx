@@ -14,16 +14,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <Providers>
-      <html lang="en" dir='rtl'>
-        <body className='bg-[#f3f3f3] flex'>
+
+    <html lang="en" dir='rtl' className='light' style={{ colorScheme: 'light' }}>
+      <body className=' bg-light-secondary dark:bg-dark-primary flex'>
+        <Providers>
           <SideBar />
-          <section className='flex-1'>
+          <section className='flex-1 px-10'>
             <Topbar />
             {children}
           </section>
-        </body>
-      </html>
-    </Providers>
+        </Providers>
+
+      </body>
+    </html>
   )
 }
