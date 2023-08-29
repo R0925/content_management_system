@@ -1,7 +1,11 @@
 'use client'
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { Menu, Transition } from '@headlessui/react'
+import { HiMenuAlt3 } from 'react-icons/hi'
 import ThemeSwitcher from './ThemeSwitcher'
+import { useGlobalContext } from '@/context/store'
+import { sideBarLinks } from '@/constants'
+import { usePathname } from 'next/navigation'
 
 
 
@@ -10,15 +14,32 @@ function classNames(...classes: any) {
 }
 
 const Topbar = () => {
+
+    const pathname = usePathname();
+    const { activeSideBar, setActiveSideBar, pageName, setPageName } = useGlobalContext();
+
+    useEffect(() => {
+        sideBarLinks.forEach(item => {
+            if (pathname.includes(item.route))
+                setPageName(item.label)
+        })
+    }, [])
+
+
     return (
         <section className='w-full pt-7 flex justify-between items-center h-28'>
-            <h1 className='text-3xl font-[anjoman]'>داشبورد</h1>
+            <div className='flex gap-5'>
+                <button className='lg:hidden block text-3xl' onClick={() => (setActiveSideBar(true))}>
+                    <HiMenuAlt3 />
+                </button>
+                <h1 className='text-3xl font-[anjoman]'>{pageName}</h1>
+            </div>
 
             <div className='flex items-center gap-10 text-2xl text-gray-700'>
                 <div className='flex items-center gap-2'>
                     <ThemeSwitcher />
                 </div>
-                
+
                 <Menu as="div" className="relative inline-block group">
                     <div>
                         <Menu.Button className=" w-44 inline-flex items-center gap-x-1.5 px-3 py-2 text-sm font-[anjoman] text-dark-secondary dark:text-light-secondary group-hover:bg-[#4578f915] transition-all duration-300 rounded-xl">
